@@ -3,7 +3,7 @@
 
 
 body {
-    background: linear-gradient(to right, #243B55, #141E30);
+    background: linear-gradient(to right, rgb(27, 66, 66), rgb(9, 38, 53));
     color: white;
     font-family: Arial, sans-serif;
 }
@@ -30,12 +30,14 @@ body {
     bottom: 220px;
     z-index: 2;
 }
-.carousel-caption h5{
+
+.carousel-caption h5 {
     font-size: 45px;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-top: 25px;
 }
+
 .carousel-caption p {
     width: 60%;
     margin: auto;
@@ -43,7 +45,8 @@ body {
     line-height: 1.9;
 
 }
-.carousel-inner::before{
+
+.carousel-inner::before {
     content: '';
     position: absolute;
     top: 0;
@@ -53,41 +56,51 @@ body {
     background: rgba(0, 0, 0, 0.7);
     z-index: 1;
 }
-.navbar-nav a{
+
+.navbar-nav a {
     font-size: 15px;
     text-transform: uppercase;
     font-weight: 500;
 }
-.navbar-light .navbar-brand{
+
+.navbar-light .navbar-brand {
     color: #000;
     font-size: 25px;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 2px;
 }
+
 .navbar-light .navbar-brand:focus,
- .navbar-light .navbar-brand:hover {
+.navbar-light .navbar-brand:hover {
     color: #ff5733;
 }
-.navbar-light .navbar-nav .navbar-link{
+
+.navbar-light .navbar-nav .navbar-link {
     color: #000;
 }
-.w-100{
+
+.w-100 {
     height: 100vh;
 }
-.about-bridges{
+
+.about-bridges {
     margin-top: 150px;
 }
-.more{
+
+.more {
     margin-top: 150px;
 }
-.about{
+
+.about {
     border-radius: 30px;
 }
-.bridges{
+
+.bridges {
     border-radius: 30px;
 }
-.heading{
+
+.heading {
     font-weight: bold !important;
     margin-top: 150px !important;
     margin-bottom: 60px !important;
@@ -106,20 +119,8 @@ body {
     font-size: 1rem;
 }
 
-@keyframes scrollTicker {
-    from {
-        transform: translateX(100%);
-    }
-
-    to {
-        transform: translateX(-100%);
-    }
-}
-
 .ticker span {
     display: inline-block;
-    padding-left: 100%;
-    animation: scrollTicker 20s linear infinite;
 }
 
 .visitor-count {
@@ -127,6 +128,24 @@ body {
     font-size: 1rem;
     margin-left: 15px;
 }
+
 .heading {
-    text-decoration: none;    
+    text-decoration: none;
+}
+
+.row1 {
+    margin-top: 200px;
+}
+
+.contact {
+    margin-top: 150px;
+}
+.all-bridges{
+    margin-top: 75px;
+}
+.filterbar{
+    margin-top: 75px;
+}
+.gallery{
+    margin-top: 75px;
 }

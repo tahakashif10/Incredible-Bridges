@@ -26,22 +26,23 @@
                             <span class="visually-hidden">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="bridges.html" id="dropdownId" data-bs-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">Bridges</a>
+                        <a class="nav-link dropdown-toggle" href="allbridges.html" id="dropdownId"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bridges</a>
                         <div class="dropdown-menu bg-dark" aria-labelledby="dropdownId">
-                            <a class="dropdown-item text-white" href="modern.html">Modern</a>
-                            <a class="dropdown-item text-white" href="#">Iconix</a>
+                            <a class="dropdown-item text-white" href="allbridges.html">All Bridges</a>
+                            <a class="dropdown-item text-white" href="#">Modern</a>
+                            <a class="dropdown-item text-white" href="#">Iconic</a>
                             <a class="dropdown-item text-white" href="#">Historical</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Gallery</a>
+                        <a class="nav-link" href="gallery.html">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link" href="aboutus.html">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link" href="contactus.html">Contact Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">FAQ</a>
@@ -130,9 +131,10 @@
         </center>
         <br>
         <div class="row">
-            <div class="col-lg-4 cards">
+            <div class="col-lg-4">
                 <center>
-                    <img class="card-img bridges" src="../Media/Sydney Harbour Bridge.jpg" height="300px" alt="">
+                    <img class="card-img bridges img-fluid" src="../Media/Sydney Harbour Bridge.jpg" height="300px"
+                        alt="">
                     <h3 class="mt-2">
                         Sydney Harbour Bridge
                     </h3>
@@ -140,12 +142,11 @@
                         The Sydney Harbour Bridge, also known as the Sydney Opera House Bridge, is a 230-meter (750-ft)
                         cable-stayed bridge that spans the Harbour Bridge in Sydney Harbour, Australia.
                     </p>
-                    <p><a href="#" class="btn btn-warning mt-2">Learn More</a></p>
                 </center>
             </div>
             <div class="col-lg-4">
                 <center>
-                    <img class="card-img bridges" src="../Media/Øresund Bridge.jpg" height="300px" alt="">
+                    <img class="card-img bridges img-fluid" src="../Media/Øresund Bridge.jpg" height="300px" alt="">
                     <h3 class="mt-2">
                         Øresund Bridge
                     </h3>
@@ -154,63 +155,53 @@
                         Norway.
                         Constructed between 1979 and 1982, it is one of the oldest examples of a cable-stayed bridge.
                     </p>
+                </center>
+            </div>
+            <div class="col-lg-4">
+                <center>
+                    <img class="card-img bridges img-fluid" src="../Media/Bridge 1.jpg"
+                        height="300px" alt="">
+                    <h3 class="mt-2">
+                        Golden Gate Bridge
+                    </h3>
+                    <p>
+                        The Golden Gate Bridge is a 1,800-meter (5,600-ft) cable-stayed bridge that spans the Golden Gate Bridge
+                        in San Francisco, California.
+                    </p>
+                </center>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-4">
+                <center>
                     <p><a href="#" class="btn btn-warning mt-2">Learn More</a></p>
                 </center>
             </div>
             <div class="col-lg-4">
                 <center>
-                    <img class="card=img bridges" src="../Media/Tower Bridge.jpg" height="300px" alt="">
-                    <h3 class="mt-2">
-                        Tower Bridge
-                    </h3>
-                    <p>
-                        The Tower Bridge is a 1,000-meter (3,281-ft) cable-stayed bridge that spans the Tower Bridge in
-                        Shanghai, China. Constructed between 1939 and 1942, it is one of the oldest examples of a
-                        cable-stayed bridge.
-                    </p>
+                    <p><a href="#" class="btn btn-warning mt-2">Learn More</a></p>
+                </center>
+            </div>
+            <div class="col-lg-4">
+                <center>
                     <p><a href="#" class="btn btn-warning mt-2">Learn More</a></p>
                 </center>
             </div>
         </div>
 
+
         <div class="ticker">
-            <span id="tickerText"></span>
+            <span id="tickerText">
+                <p><a href="#" class="btn btn-warning mt-2">Learn More</a></p>
+            </span>
         </div>
 
-        <source src="main.js" type="">
+
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script>
-            document.addEventListener("scroll", function () {
-    let sections = document.querySelectorAll(".content-section");
-    sections.forEach(section => {
-        let position = section.getBoundingClientRect().top;
-        let screenPosition = window.innerHeight / 1.3;
-        if (position < screenPosition) {
-            section.classList.add("visible");
-        }
-    });
-});
-
-let visitorCount = localStorage.getItem("visitorCount") || 0;
-visitorCount++;
-localStorage.setItem("visitorCount", visitorCount);
-document.getElementById("visitorCount").textContent = visitorCount;
-
-function updateTicker() {
-    let date = new Date().toLocaleDateString();
-    let time = new Date().toLocaleTimeString();
-    navigator.geolocation.getCurrentPosition(position => {
-        let lat = position.coords.latitude.toFixed(2);
-        let lon = position.coords.longitude.toFixed(2);
-        document.getElementById("tickerText").textContent = `Date: ${date} | Time: ${time} | Location: Lat ${lat}, Lon ${lon}`;
-    }, () => {
-        document.getElementById("tickerText").textContent = `Date: ${date} | Time: ${time} | Location: Unable to retrieve`;
-    });
-}
-updateTicker();
-setInterval(updateTicker, 1000);
-        </script>
-    </body>
+        <script src="main.js"></script>
+</body>
 
 </html>
