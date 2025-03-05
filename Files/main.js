@@ -7,12 +7,12 @@ navigator.geolocation.getCurrentPosition(function (position) {
     if ((lat >= 10 && lat <= 81) && (lon >= 26 && lon <= 169)) {
 
         {
-            alert("Muskuraaye Ap Asia mein hain");
+            alert("You're in Asia");
         }
     }
     else {
         {
-            alert("Muskuraaye Ap Asia mein hain");
+            alert("You're in Asia");
         }
     }
 })
