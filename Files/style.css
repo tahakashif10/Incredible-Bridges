@@ -179,3 +179,6 @@ body {
     padding-top: 15px;
     margin-top: 20px;
 }
+.card-img{
+    cursor: pointer !important;
+}

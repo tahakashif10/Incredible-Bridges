@@ -104,15 +104,17 @@
         <div class="row bridge-container">
             <div class="col-lg-4 bridge-card my-4" data-category="modern">
                 <div class="card">
-                    <a class="text-decoration-none" href=""><img src="../Media/Bridge 2.jpg" height="200"
+                    <img src="../Media/Bridge 2.jpg" height="200" onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 1','Description of an iconic bridge.')"
                             class="card-img img-fluid" alt="Iconic Bridge">
                         <div class="card-body ">
                             <center>
-                                <h5 class="card-title text-black fw-bold">Iconic Bridge 1</h5>
+                                <h5 class="card-title text-black fw-bold">Iconic Bridge 12</h5>
                                 <p class="card-text text-black">Description of an iconic bridge.</p>
+                                <button type="button" onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 1','Description of an iconic bridge.')" class="btn btn-success">View Details</button>
                             </center>
                         </div>
-                    </a>
+                       
+                  
                 </div>
             </div>
             <div class="col-lg-4 bridge-card my-4" data-category="modern">
@@ -276,6 +278,16 @@
                 }
             });
         });
+        function viewdetails(image,name,desc)
+        {
+            var obj = {
+                'image': image,
+                'name': name,
+                'description': desc
+            }
+            localStorage.setItem('bridgedetails', JSON.stringify(obj))
+            window.location.href = 'details.html'
+        }
     </script>
 
 
