@@ -35,12 +35,18 @@
     }
 
     .filter-btn-all {
-        background: linear-gradient(45deg, #8e44ad, #c0392b);
+        background: linear-gradient(45deg, #27ae60, #52be80);
         color: white;
     }
 
     .filter-btn:hover {
         transform: scale(1.1);
+    }
+    .buttondiv{
+        display: none;
+    }
+    .buttondiv2{
+        display: none;
     }
 </style>
 
@@ -92,203 +98,449 @@
         </div>
     </nav>
 
-    <div class="container all-bridges">
-        <h1 class="text-center">All Bridges</h1>
-        <div class="text-center my-3">
-            <button class="btn btn-primary filter-btn" data-filter="modern">Modern</button>
-            <button class="btn btn-primary filter-btn" data-filter="iconic">Iconic</button>
-            <button class="btn btn-primary filter-btn" data-filter="historical">Historical</button>
-            <button class="btn btn-secondary filter-btn" data-filter="all">Show All</button>
-        </div>
+    <div class="container continents">
+        <h3 class="text-center mt-5">All Bridges</h3>
+            <select name="" class="w-100 p-1 mt-5" id="mylist" onchange="filtercont()" style="height: 50px;background-color: #3498db;">
+                <option value="asia">Asia</option>
+                <option value="europe">Europe</option>
+                <option value="africa">Africa</option>
+            </select>
+        
 
-        <div class="row bridge-container">
-            <div class="col-lg-4 bridge-card my-4" data-category="modern">
-                <div class="card">
-                    <img src="../Media/Bridge 2.jpg" height="200" onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 1','Description of an iconic bridge.')"
-                            class="card-img img-fluid" alt="Iconic Bridge">
-                        <div class="card-body ">
-                            <center>
-                                <h5 class="card-title text-black fw-bold">Iconic Bridge 12</h5>
-                                <p class="card-text text-black">Description of an iconic bridge.</p>
-                                <button type="button" onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 1','Description of an iconic bridge.')" class="btn btn-success">View Details</button>
-                            </center>
-                        </div>
-                       
-                  
-                </div>
-            </div>
-            <div class="col-lg-4 bridge-card my-4" data-category="modern">
-                <div class="card">
-                    <a class="text-decoration-none" href=""><img src="../Media/Bridge 2.jpg" height="200"
-                            class="card-img img-fluid" alt="Iconic Bridge">
-                        <div class="card-body ">
-                            <center>
-                                <h5 class="card-title text-black fw-bold">Iconic Bridge 1</h5>
-                                <p class="card-text text-black">Description of an iconic bridge.</p>
-                            </center>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 bridge-card my-4" data-category="iconic">
-                <div class="card">
-                    <a class="text-decoration-none" href=""><img src="../Media/Bridge 2.jpg" height="200"
-                            class="card-img img-fluid" alt="Iconic Bridge">
-                        <div class="card-body ">
-                            <center>
-                                <h5 class="card-title text-black fw-bold">Iconic Bridge 1</h5>
-                                <p class="card-text text-black">Description of an iconic bridge.</p>
-                            </center>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 bridge-card my-4" data-category="iconic">
-                <div class="card">
-                    <a class="text-decoration-none" href=""><img src="../Media/Bridge 2.jpg" height="200"
-                            class="card-img img-fluid" alt="Iconic Bridge">
-                        <div class="card-body ">
-                            <center>
-                                <h5 class="card-title text-black fw-bold">Iconic Bridge 1</h5>
-                                <p class="card-text text-black">Description of an iconic bridge.</p>
-                            </center>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 bridge-card my-4" data-category="historical">
-                <div class="card">
-                    <a class="text-decoration-none" href=""><img src="../Media/Bridge 2.jpg" height="200"
-                            class="card-img img-fluid" alt="Iconic Bridge">
-                        <div class="card-body ">
-                            <center>
-                                <h5 class="card-title text-black fw-bold">Iconic Bridge 1</h5>
-                                <p class="card-text text-black">Description of an iconic bridge.</p>
-                            </center>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 bridge-card my-4" data-category="historical">
-                <div class="card">
-                    <a class="text-decoration-none" href=""><img src="../Media/Bridge 2.jpg" height="200"
-                            class="card-img img-fluid" alt="Iconic Bridge">
-                        <div class="card-body ">
-                            <center>
-                                <h5 class="card-title text-black fw-bold">Iconic Bridge 1</h5>
-                                <p class="card-text text-black">Description of an iconic bridge.</p>
-                            </center>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 bridge-card my-4" data-category="iconic">
-                <div class="card">
-                    <a class="text-decoration-none" href=""><img src="../Media/Bridge 2.jpg" height="200"
-                            class="card-img img-fluid" alt="Iconic Bridge">
-                        <div class="card-body ">
-                            <center>
-                                <h5 class="card-title text-black fw-bold">Iconic Bridge 1</h5>
-                                <p class="card-text text-black">Description of an iconic bridge.</p>
-                            </center>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 bridge-card my-4" data-category="modern">
-                <div class="card">
-                    <a class="text-decoration-none" href=""><img src="../Media/Bridge 2.jpg" height="200"
-                            class="card-img img-fluid" alt="Iconic Bridge">
-                        <div class="card-body ">
-                            <center>
-                                <h5 class="card-title text-black fw-bold">Iconic Bridge 1</h5>
-                                <p class="card-text text-black">Description of an iconic bridge.</p>
-                            </center>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 bridge-card my-4" data-category="historical">
-                <div class="card">
-                    <a class="text-decoration-none" href=""><img src="../Media/Bridge 2.jpg" height="200"
-                            class="card-img img-fluid" alt="Iconic Bridge">
-                        <div class="card-body ">
-                            <center>
-                                <h5 class="card-title text-black fw-bold">Iconic Bridge 1</h5>
-                                <p class="card-text text-black">Description of an iconic bridge.</p>
-                            </center>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <!-- Column 1 -->
-                <div class="col-md-3">
-                    <h6>Where To Buy</h6>
-                    <a href="#">See Authorized Retailers</a>
+        <div class="container all-bridges">
+            <div class="text-center buttondiv">
+                <div class="text-center">
+                    <button class="btn btn-primary filter-btn" onclick="filterdiv()" >Modern</button>
+                    <button class="btn btn-primary filter-btn" onclick="filterdiv()" >Iconic</button>
+                    <button class="btn btn-primary filter-btn" onclick="filterdiv( )" >Historical</button>
                 </div>
     
-                <!-- Column 3 -->
-                <div class="col-md-3 float-start">
-                    <h6>News & Info</h6>
-                    <a href="index.html">Home</a><br>
-                    <a href="allbridges.html">All Bridges</a><br>
-                    <a href="gallery.html">Gallery</a><br>
-                    <a href="aboutus.html">About Us</a><br>
-                    <a href="contactus.html">Contact Us</a><br>
-                    <a href="faq.html">FAQ</a><br>
-                    
-                </div>
             </div>
+            <div class="text-center buttondiv2">
+                <div class="text-center">
+                    <button class="btn btn-primary filter-btn" onclick="filterdiv2('modern')" >Shortest</button>
+                    <button class="btn btn-primary filter-btn" onclick="filterdiv2('iconic')" >Longest</button>
+                    <button class="btn btn-primary filter-btn" onclick="filterdiv2('historical')" >Tallest</button>
+                </div>
     
-            <div class="footer-bottom text-center mt-4">
-                <div>© 2024 Incredible Bridges</div>
-                <div class="social-icons mt-3">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-git"></i></a>
+            </div>
+
+            <div class="row bridge-container">
+                <div class="col-lg-4 bridge-card my-4 asia" data-category="modern">
+                    <div class="card">
+                        <img src="../Media/Bridge 2.jpg" height="200"
+                            onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 1','Description of an iconic bridge.')"
+                            class="card-img img-fluid" alt="Iconic Bridge">
+                        <div class="card-body ">
+                            <center>
+                                <h5 class="card-title text-black fw-bold">Asia Bridge 1</h5>
+                                <p class="card-text text-black">Description of an iconic bridge.</p>
+                                <button type="button"
+                                    onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 1','Description of an iconic bridge.')"
+                                    class="btn btn-success">View Details</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 bridge-card my-4 asia" data-category="iconic">
+                    <div class="card">
+                        <img src="../Media/Bridge 2.jpg" height="200"
+                            onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 2','Description of an iconic bridge.')"
+                            class="card-img img-fluid" alt="Iconic Bridge">
+                        <div class="card-body ">
+                            <center>
+                                <h5 class="card-title text-black fw-bold">Asia Bridge 2</h5>
+                                <p class="card-text text-black">Description of an iconic bridge.</p>
+                                <button type="button"
+                                    onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 2','Description of an iconic bridge.')"
+                                    class="btn btn-success">View Details</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 bridge-card my-4 asia" data-category="historical">
+                    <div class="card">
+                        <img src="../Media/Bridge 2.jpg" height="200"
+                            onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 3','Description of an iconic bridge.')"
+                            class="card-img img-fluid" alt="Iconic Bridge">
+                        <div class="card-body ">
+                            <center>
+                                <h5 class="card-title text-black fw-bold">Asia Bridge 3</h5>
+                                <p class="card-text text-black">Description of an iconic bridge.</p>
+                                <button type="button"
+                                    onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 3','Description of an iconic bridge.')"
+                                    class="btn btn-success">View Details</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 bridge-card my-4 europe" data-category="modern">
+                    <div class="card">
+                        <img src="../Media/Bridge 2.jpg" height="200"
+                            onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 1','Description of an iconic bridge.')"
+                            class="card-img img-fluid" alt="Iconic Bridge">
+                        <div class="card-body ">
+                            <center>
+                                <h5 class="card-title text-black fw-bold">Europe Bridge 1</h5>
+                                <p class="card-text text-black">Description of an iconic bridge.</p>
+                                <button type="button"
+                                    onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 1','Description of an iconic bridge.')"
+                                    class="btn btn-success">View Details</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 bridge-card my-4 europe" data-category="iconic">
+                    <div class="card">
+                        <img src="../Media/Bridge 2.jpg" height="200"
+                            onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 2','Description of an iconic bridge.')"
+                            class="card-img img-fluid" alt="Iconic Bridge">
+                        <div class="card-body ">
+                            <center>
+                                <h5 class="card-title text-black fw-bold">Europe Bridge 2</h5>
+                                <p class="card-text text-black">Description of an iconic bridge.</p>
+                                <button type="button"
+                                    onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 2','Description of an iconic bridge.')"
+                                    class="btn btn-success">View Details</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 bridge-card my-4 europe" data-category="historical">
+                    <div class="card">
+                        <img src="../Media/Bridge 2.jpg" height="200"
+                            onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 3','Description of an iconic bridge.')"
+                            class="card-img img-fluid" alt="Iconic Bridge">
+                        <div class="card-body ">
+                            <center>
+                                <h5 class="card-title text-black fw-bold">Europe Bridge 3</h5>
+                                <p class="card-text text-black">Description of an iconic bridge.</p>
+                                <button type="button"
+                                    onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 3','Description of an iconic bridge.')"
+                                    class="btn btn-success">View Details</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 bridge-card my-4 europe" data-category="modern">
+                    <div class="card">
+                        <img src="../Media/Bridge 2.jpg" height="200"
+                            onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 1','Description of an iconic bridge.')"
+                            class="card-img img-fluid" alt="Iconic Bridge">
+                        <div class="card-body ">
+                            <center>
+                                <h5 class="card-title text-black fw-bold">Europe Bridge 4</h5>
+                                <p class="card-text text-black">Description of an iconic bridge.</p>
+                                <button type="button"
+                                    onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 1','Description of an iconic bridge.')"
+                                    class="btn btn-success">View Details</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 bridge-card my-4 europe" data-category="iconic">
+                    <div class="card">
+                        <img src="../Media/Bridge 2.jpg" height="200"
+                            onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 2','Description of an iconic bridge.')"
+                            class="card-img img-fluid" alt="Iconic Bridge">
+                        <div class="card-body ">
+                            <center>
+                                <h5 class="card-title text-black fw-bold">Europe Bridge 5</h5>
+                                <p class="card-text text-black">Description of an iconic bridge.</p>
+                                <button type="button"
+                                    onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 2','Description of an iconic bridge.')"
+                                    class="btn btn-success">View Details</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 bridge-card my-4 europe" data-category="historical">
+                    <div class="card">
+                        <img src="../Media/Bridge 2.jpg" height="200"
+                            onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 3','Description of an iconic bridge.')"
+                            class="card-img img-fluid" alt="Iconic Bridge">
+                        <div class="card-body ">
+                            <center>
+                                <h5 class="card-title text-black fw-bold">Europe Bridge 6</h5>
+                                <p class="card-text text-black">Description of an iconic bridge.</p>
+                                <button type="button"
+                                    onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 3','Description of an iconic bridge.')"
+                                    class="btn btn-success">View Details</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 bridge-card my-4 asia" data-category="modern">
+                    <div class="card">
+                        <img src="../Media/Bridge 2.jpg" height="200"
+                            onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 1','Description of an iconic bridge.')"
+                            class="card-img img-fluid" alt="Iconic Bridge">
+                        <div class="card-body ">
+                            <center>
+                                <h5 class="card-title text-black fw-bold">Asia Bridge 4</h5>
+                                <p class="card-text text-black">Description of an iconic bridge.</p>
+                                <button type="button"
+                                    onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 1','Description of an iconic bridge.')"
+                                    class="btn btn-success">View Details</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 bridge-card my-4 asia" data-category="iconic">
+                    <div class="card">
+                        <img src="../Media/Bridge 2.jpg" height="200"
+                            onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 2','Description of an iconic bridge.')"
+                            class="card-img img-fluid" alt="Iconic Bridge">
+                        <div class="card-body ">
+                            <center>
+                                <h5 class="card-title text-black fw-bold">Asia Bridge 5</h5>
+                                <p class="card-text text-black">Description of an iconic bridge.</p>
+                                <button type="button"
+                                    onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 2','Description of an iconic bridge.')"
+                                    class="btn btn-success">View Details</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 bridge-card my-4 asia" data-category="historical">
+                    <div class="card">
+                        <img src="../Media/Bridge 2.jpg" height="200"
+                            onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 3','Description of an iconic bridge.')"
+                            class="card-img img-fluid" alt="Iconic Bridge">
+                        <div class="card-body ">
+                            <center>
+                                <h5 class="card-title text-black fw-bold">Asia Bridge 6</h5>
+                                <p class="card-text text-black">Description of an iconic bridge.</p>
+                                <button type="button"
+                                    onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 3','Description of an iconic bridge.')"
+                                    class="btn btn-success">View Details</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 bridge-card my-4 africa" data-category="modern">
+                    <div class="card">
+                        <img src="../Media/Bridge 2.jpg" height="200"
+                            onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 1','Description of an iconic bridge.')"
+                            class="card-img img-fluid" alt="Iconic Bridge">
+                        <div class="card-body ">
+                            <center>
+                                <h5 class="card-title text-black fw-bold">Africa Bridge 1</h5>
+                                <p class="card-text text-black">Description of an iconic bridge.</p>
+                                <button type="button"
+                                    onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 1','Description of an iconic bridge.')"
+                                    class="btn btn-success">View Details</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 bridge-card my-4 africa" data-category="iconic">
+                    <div class="card">
+                        <img src="../Media/Bridge 2.jpg" height="200"
+                            onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 2','Description of an iconic bridge.')"
+                            class="card-img img-fluid" alt="Iconic Bridge">
+                        <div class="card-body ">
+                            <center>
+                                <h5 class="card-title text-black fw-bold">Africa Bridge 2</h5>
+                                <p class="card-text text-black">Description of an iconic bridge.</p>
+                                <button type="button"
+                                    onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 2','Description of an iconic bridge.')"
+                                    class="btn btn-success">View Details</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 bridge-card my-4 africa" data-category="historical">
+                    <div class="card">
+                        <img src="../Media/Bridge 2.jpg" height="200"
+                            onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 3','Description of an iconic bridge.')"
+                            class="card-img img-fluid" alt="Iconic Bridge">
+                        <div class="card-body ">
+                            <center>
+                                <h5 class="card-title text-black fw-bold">Africa Bridge 3</h5>
+                                <p class="card-text text-black">Description of an iconic bridge.</p>
+                                <button type="button"
+                                    onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 3','Description of an iconic bridge.')"
+                                    class="btn btn-success">View Details</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 bridge-card my-4 africa" data-category="modern">
+                    <div class="card">
+                        <img src="../Media/Bridge 2.jpg" height="200"
+                            onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 1','Description of an iconic bridge.')"
+                            class="card-img img-fluid" alt="Iconic Bridge">
+                        <div class="card-body ">
+                            <center>
+                                <h5 class="card-title text-black fw-bold">Africa Bridge 4</h5>
+                                <p class="card-text text-black">Description of an iconic bridge.</p>
+                                <button type="button"
+                                    onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 1','Description of an iconic bridge.')"
+                                    class="btn btn-success">View Details</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 bridge-card my-4 africa" data-category="iconic">
+                    <div class="card">
+                        <img src="../Media/Bridge 2.jpg" height="200"
+                            onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 2','Description of an iconic bridge.')"
+                            class="card-img img-fluid" alt="Iconic Bridge">
+                        <div class="card-body ">
+                            <center>
+                                <h5 class="card-title text-black fw-bold">Africa Bridge 5</h5>
+                                <p class="card-text text-black">Description of an iconic bridge.</p>
+                                <button type="button"
+                                    onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 2','Description of an iconic bridge.')"
+                                    class="btn btn-success">View Details</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 bridge-card my-4 africa" data-category="historical">
+                    <div class="card">
+                        <img src="../Media/Bridge 2.jpg" height="200"
+                            onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 3','Description of an iconic bridge.')"
+                            class="card-img img-fluid" alt="Iconic Bridge">
+                        <div class="card-body ">
+                            <center>
+                                <h5 class="card-title text-black fw-bold">Africa Bridge 6</h5>
+                                <p class="card-text text-black">Description of an iconic bridge.</p>
+                                <button type="button"
+                                    onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 3','Description of an iconic bridge.')"
+                                    class="btn btn-success">View Details</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 bridge-card my-4 africa" data-category="modern">
+                    <div class="card">
+                        <img src="../Media/Bridge 2.jpg" height="200"
+                            onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 1','Description of an iconic bridge.')"
+                            class="card-img img-fluid" alt="Iconic Bridge">
+                        <div class="card-body ">
+                            <center>
+                                <h5 class="card-title text-black fw-bold">Africa Bridge 7</h5>
+                                <p class="card-text text-black">Description of an iconic bridge.</p>
+                                <button type="button"
+                                    onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 1','Description of an iconic bridge.')"
+                                    class="btn btn-success">View Details</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 bridge-card my-4 africa" data-category="iconic">
+                    <div class="card">
+                        <img src="../Media/Bridge 2.jpg" height="200"
+                            onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 2','Description of an iconic bridge.')"
+                            class="card-img img-fluid" alt="Iconic Bridge">
+                        <div class="card-body ">
+                            <center>
+                                <h5 class="card-title text-black fw-bold">Africa Bridge 8</h5>
+                                <p class="card-text text-black">Description of an iconic bridge.</p>
+                                <button type="button"
+                                    onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 2','Description of an iconic bridge.')"
+                                    class="btn btn-success">View Details</button>
+                            </center>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+
+       
+
+            <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <!-- Column 1 -->
+                        <div class="col-md-3">
+                            <h6>Where To Buy</h6>
+                            <a href="#">See Authorized Retailers</a>
+                        </div>
+
+                        <!-- Column 3 -->
+                        <div class="col-md-3 float-start">
+                            <h6>News & Info</h6>
+                            <a href="index.html">Home</a><br>
+                            <a href="allbridges.html">All Bridges</a><br>
+                            <a href="gallery.html">Gallery</a><br>
+                            <a href="aboutus.html">About Us</a><br>
+                            <a href="contactus.html">Contact Us</a><br>
+                            <a href="faq.html">FAQ</a><br>
+
+                        </div>
+                    </div>
+
+                    <div class="footer-bottom text-center mt-4">
+                        <div>© 2024 Incredible Bridges</div>
+                        <div class="social-icons mt-3">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-git"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
 
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="main.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.filter-btn').click(function () {
-                let filterValue = $(this).attr('data-filter');
-                let $bridgeContainer = $('.bridge-container');
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="main.js"></script>
+            <script>
+                $(document).ready(function () {
+                    $('.filter-btn').click(function () {
+                        let filterValue = $(this).attr('data-filter');
+                        let $bridgeContainer = $('.bridge-container');
 
-                if (filterValue === 'all') {
-                    $('.bridge-card').fadeIn();
-                } else {
-                    $('.bridge-card').hide();
-                    let filteredBridges = $('.bridge-card[data-category="' + filterValue + '"]').fadeIn();
-                    $bridgeContainer.append(filteredBridges);
+                        if (filterValue === 'all') {
+                            $('.bridge-card').fadeIn();
+                        } else {
+                            $('.bridge-card').hide();
+                            let filteredBridges = $('.bridge-card[data-category="' + filterValue + '"]').fadeIn();
+                            $bridgeContainer.append(filteredBridges);
+                        }
+                    });
+                });
+                function viewdetails(image, name, desc) {
+                    var obj = {
+                        'image': image,
+                        'name': name,
+                        'description': desc
+                    }
+                    localStorage.setItem('bridgedetails', JSON.stringify(obj))
+                    window.location.href = 'details.html'
                 }
-            });
-        });
-        function viewdetails(image,name,desc)
-        {
-            var obj = {
-                'image': image,
-                'name': name,
-                'description': desc
-            }
-            localStorage.setItem('bridgedetails', JSON.stringify(obj))
-            window.location.href = 'details.html'
-        }
-    </script>
+                function filtercont() {
+                    var v = document.getElementById('mylist').value
+                    if (v == 'asia') {
+                        $('.asia').show()
+                        $('.europe').hide()
+                        $('.africa').hide()
+                    }
+                    else if(v == 'europe')
+                    {
+                        $('.europe').show()
+                        $('.asia').hide()
+                        $('.africa').hide()
+                    }
+                    else if(v == 'africa')
+                    {
+                        $('.africa').show()
+                        $('.asia').hide()
+                        $('.europe').hide()
+                    }
+                    $('.buttondiv').show()
+                    $('.buttondiv2').hide()
+                }
+                function filterdiv()
+                {
+                    $('.buttondiv2').show()
+                    $('.buttondiv').hide()
+                }
+
+            </script>
 
 
 </body>

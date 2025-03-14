@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incredible Bridges</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .filter-btn {
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 18px;
+            border-radius: 25px;
+            transition: all 0.3s ease-in-out;
+        }
+    
+        .filter-btn-modern {
+            background: linear-gradient(45deg, #3498db, #6dd5fa);
+            color: white;
+        }
+    
+        .filter-btn-iconic {
+            background: linear-gradient(45deg, #e74c3c, #ff9f43);
+            color: white;
+        }
+    
+        .filter-btn-historical {
+            background: linear-gradient(45deg, #27ae60, #52be80);
+            color: white;
+        }
+    
+        .filter-btn-all {
+            background: linear-gradient(45deg, #3498db, #6dd5fa);
+            color: white;
+        }
+    
+        .filter-btn:hover {
+            transform: scale(1.1);
+        }
+    </style>
+
+</head>
+
+    <main>
+        <div class="ticker">
+            <span id="tickerText">
+                <p><a href="#" class="btn btn-warning mt-2">Learn More</a></p>
+            </span>
+        </div>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link " href="index.html" aria-current="page">Home
+                                <span class="visually-hidden">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="allbridges.html" id="dropdownId"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bridges</a>
+                            <div class="dropdown-menu bg-dark" aria-labelledby="dropdownId">
+                                <a class="dropdown-item text-white" href="allbridges.html">All Bridges</a>
+                                <a class="dropdown-item text-white" href="#">Modern</a>
+                                <a class="dropdown-item text-white" href="#">Iconi</a>
+                                <a class="dropdown-item text-white" href="#">Historical</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutus.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactus.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="faq.html">FAQ</a>
+                        </li>
+                        <span class="visitor-count">Visitors: <span id="visitorCount">0</span></span>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    
+        <div class="container all-bridges">
+            <h1 class="text-center">All Bridges</h1>
+            <div class="text-center my-3">
+                <button class="btn btn-primary filter-btn" data-filter="modern">Longest</button>
+                <button class="btn btn-primary filter-btn" data-filter="iconic">Tallest</button>
+                <button class="btn btn-primary filter-btn" data-filter="historical">Highest</button>
+                <button class="btn btn-secondary filter-btn" data-filter="all">Oldest</button>
+            </div>
+
+            <div class="row bridge-container">
+        <div class="col-lg-4 bridge-card my-4" data-category="longest">
+            <div class="card">
+                <img src="../Media/Bridge 2.jpg" height="200"
+                    onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 3','Description of an iconic bridge.')"
+                    class="card-img img-fluid" alt="Iconic Bridge">
+                <div class="card-body ">
+                    <center>
+                        <h5 class="card-title text-black fw-bold">Iconic Bridge 3</h5>
+                        <p class="card-text text-black">Description of an iconic bridge.</p>
+                        <button type="button"
+                            onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 3','Description of an iconic bridge.')"
+                            class="btn btn-success">View Details</button>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 bridge-card my-4" data-category="tallest">
+            <div class="card">
+                <img src="../Media/Bridge 2.jpg" height="200"
+                    onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 3','Description of an iconic bridge.')"
+                    class="card-img img-fluid" alt="Iconic Bridge">
+                <div class="card-body ">
+                    <center>
+                        <h5 class="card-title text-black fw-bold">Iconic Bridge 3</h5>
+                        <p class="card-text text-black">Description of an iconic bridge.</p>
+                        <button type="button"
+                            onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 3','Description of an iconic bridge.')"
+                            class="btn btn-success">View Details</button>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 bridge-card my-4" data-category="highest">
+            <div class="card">
+                <img src="../Media/Bridge 2.jpg" height="200"
+                    onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 3','Description of an iconic bridge.')"
+                    class="card-img img-fluid" alt="Iconic Bridge">
+                <div class="card-body ">
+                    <center>
+                        <h5 class="card-title text-black fw-bold">Iconic Bridge 3</h5>
+                        <p class="card-text text-black">Description of an iconic bridge.</p>
+                        <button type="button"
+                            onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 3','Description of an iconic bridge.')"
+                            class="btn btn-success">View Details</button>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 bridge-card my-4" data-category="oldest">
+            <div class="card">
+                <img src="../Media/Bridge 2.jpg" height="200"
+                    onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 3','Description of an iconic bridge.')"
+                    class="card-img img-fluid" alt="Iconic Bridge">
+                <div class="card-body ">
+                    <center>
+                        <h5 class="card-title text-black fw-bold">Iconic Bridge 3</h5>
+                        <p class="card-text text-black">Description of an iconic bridge.</p>
+                        <button type="button"
+                            onclick="viewdetails('../Media/Bridge 2.jpg','Iconic Bridge 3','Description of an iconic bridge.')"
+                            class="btn btn-success">View Details</button>
+                    </center>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Column 1 -->
+                <div class="col-md-3">
+                    <h6>Where To Buy</h6>
+                    <a href="#">See Authorized Retailers</a>
+                </div>
+    
+                <!-- Column 3 -->
+                <div class="col-md-3 float-start">
+                    <h6>News & Info</h6>
+                    <a href="index.html">Home</a><br>
+                    <a href="allbridges.html">All Bridges</a><br>
+                    <a href="gallery.html">Gallery</a><br>
+                    <a href="aboutus.html">About Us</a><br>
+                    <a href="contactus.html">Contact Us</a><br>
+                    <a href="faq.html">FAQ</a><br>
+                    
+                </div>
+            </div>
+    
+            <div class="footer-bottom text-center mt-4">
+                <div>© 2024 Incredible Bridges</div>
+                <div class="social-icons mt-3">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-git"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="main.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.filter-btn').click(function () {
+                let filterValue = $(this).attr('data-filter');
+                let $bridgeContainer = $('.bridge-container');
+
+                if (filterValue === 'all') {
+                    $('.bridge-card').fadeIn();
+                } else {
+                    $('.bridge-card').hide();
+                    let filteredBridges = $('.bridge-card[data-category="' + filterValue + '"]').fadeIn();
+                    $bridgeContainer.append(filteredBridges);
+                }
+            });
+        });
+        function viewdetails(image, name, desc) {
+            var obj = {
+                'image': image,
+                'name': name,
+                'description': desc
+            }
+            localStorage.setItem('bridgedetails', JSON.stringify(obj))
+            window.location.href = 'details.html'
+        }
+    </script>
+
+
+</body>
+
+</html>
