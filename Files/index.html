@@ -13,55 +13,50 @@
 </head>
 
 <body>
-    <div class="ticker">
-        <span id="tickerText">
-            <p><a href="#" class="btn btn-warning mt-2">Learn More</a></p>
-        </span>
-    </div>
-
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavId">
-                <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html" aria-current="page">Home
-                            <span class="visually-hidden">(current)</span></a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="allbridges.html" id="dropdownId"
-                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bridges</a>
-                        <div class="dropdown-menu bg-dark" aria-labelledby="dropdownId">
-                            <a class="dropdown-item text-white" href="allbridges.html">All Bridges</a>
-                            <a class="dropdown-item text-white" href="#">Modern</a>
-                            <a class="dropdown-item text-white" href="#">Iconic</a>
-                            <a class="dropdown-item text-white" href="#">Historical</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="gallery.html">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="aboutus.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contactus.html">Contact Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="faq.html">FAQ</a>
-                    </li>
-                    <span class="visitor-count">Visitors: <span id="visitorCount">0</span></span>
-                </ul>
-            </div>
+    <header>
+        <div class="ticker">
+            <span id="tickerText">
+                <p><a href="#" class="btn btn-warning mt-2">Learn More</a></p>
+            </span>
         </div>
-    </nav>
+    
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html" aria-current="page">Home
+                                <span class="visually-hidden">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="allbridges.html">Bridges</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutus.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactus.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="faq.html">FAQ</a>
+                        </li>
+                        <span class="visitor-count">Visitors: <span id="visitorCount">0</span></span>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-
+<main>
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -204,39 +199,32 @@
             </h1>
         </div>
 </div>
-        <footer class="footer">
-            <div class="container-fluid">
-                <div class="row">
-                    <!-- Column 1 -->
-                    <div class="col-md-3">
-                        <h6>Where To Buy</h6>
-                        <a href="#">See Authorized Retailers</a>
-                    </div>
-
-                    <!-- Column 3 -->
-                    <div class="col-md-3 float-start">
-                        <h6>News & Info</h6>
-                        <a href="index.html">Home</a><br>
-                        <a href="allbridges.html">All Bridges</a><br>
-                        <a href="gallery.html">Gallery</a><br>
-                        <a href="aboutus.html">About Us</a><br>
-                        <a href="contactus.html">Contact Us</a><br>
-                        <a href="faq.html">FAQ</a><br>
-
-                    </div>
-                </div>
-
-                <div class="footer-bottom text-center mt-4">
-                    <div>© 2024 Incredible Bridges</div>
-                    <div class="social-icons mt-3">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="#"><i class="fa fa-git"></i></a>
-                    </div>
-                </div>
+</main>
+<footer class="footer">
+    <div class="wrapper">
+        <div class="row">
+            <div class="content">
+                <!-- Column 1 -->
+            <div class="col-md-3">
+                <h6>Where To Buy</h6>
+                <a href="#">See Authorized Retailers</a>
             </div>
-        </footer>
+
+            <!-- Column 3 -->
+            <div class="col-md-3 float-start">
+                <h6>News & Info</h6>
+                <a href="index.html">Home</a><br>
+                <a href="allbridges.html">All Bridges</a><br>
+                <a href="gallery.html">Gallery</a><br>
+                <a href="aboutus.html">About Us</a><br>
+                <a href="contactus.html">Contact Us</a><br>
+                <a href="faq.html">FAQ</a><br>
+                
+            </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
 
 

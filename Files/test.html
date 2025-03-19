@@ -4,132 +4,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bridge Explorer</title>
+    <title>Incredible Bridges</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <style>
-        .filter-btn, .category-btn, .type-btn {
-            border: none;
-            padding: 10px 20px;
-            margin: 5px;
-            font-size: 18px;
-            border-radius: 25px;
-            transition: all 0.3s ease-in-out;
-        }
-        .filter-btn:hover, .category-btn:hover, .type-btn:hover {
-            transform: scale(1.1);
-        }
-        .bridge-card {
-            display: none; 
-        }
-    </style>
 </head>
 
 <body>
+    <div class="container mt-5">
+        <h3 class="text-center">All Bridges</h3>
+        <select id="continentSelect" class="form-control mt-3">
+            <option value="all">All</option>
+            <option value="asia">Asia</option>
+            <option value="europe">Europe</option>
+            <option value="africa">Africa</option>
+        </select>
 
-    <div class="container mt-5 text-center">
-        <h1 class="mb-4">Explore Bridges</h1>
-
-        <!-- Step 1: Continent Filter -->
-        <div id="continent-filters">
-            <button class="btn btn-primary filter-btn" data-filter="asia">Asia</button>
-            <button class="btn btn-secondary filter-btn" data-filter="europe">Europe</button>
-            <button class="btn btn-dark filter-btn" data-filter="africa">Africa</button>
+        <div id="categoryFilters" class="mt-3 text-center" style="display:none;">
+            <button class="btn btn-primary filter-btn" data-category="modern">Modern</button>
+            <button class="btn btn-primary filter-btn" data-category="iconic">Iconic</button>
+            <button class="btn btn-primary filter-btn" data-category="historical">Historical</button>
+            <button class="btn btn-primary filter-btn" data-category="all">Show All</button>
         </div>
 
-        <!-- Step 2: Category Filter (Hidden initially) -->
-        <div id="category-filters" class="mt-3" style="display: none;">
-            <button class="btn btn-info category-btn" data-filter="modern">Modern</button>
-            <button class="btn btn-danger category-btn" data-filter="iconic">Iconic</button>
-            <button class="btn btn-success category-btn" data-filter="historical">Historical</button>
-        </div>
-
-        <!-- Step 3: Type Filter (Hidden initially) -->
-        <div id="type-filters" class="mt-3" style="display: none;">
-            <button class="btn btn-warning type-btn" data-filter="tallest">Tallest</button>
-            <button class="btn btn-primary type-btn" data-filter="longest">Longest</button>
-            <button class="btn btn-secondary type-btn" data-filter="highest">Highest</button>
-            <button class="btn btn-dark type-btn" data-filter="oldest">Oldest</button>
-        </div>
-
-        <!-- Bridges Section -->
         <div class="row mt-4 bridge-container">
-            <!-- Example Bridges -->
-            <div class="col-md-4 bridge-card" data-category="modern" data-type="tallest">
+            <!--Asia Bridges-->
+            <div class="col-lg-4 bridge-card asia" data-category="modern" data-attribute="shortest">
                 <div class="card">
-                    <img src="bridge1.jpg" class="card-img-top" alt="Modern Tallest Bridge">
+                    <img src="../Media/Bridge 2.jpg" height="200" class="card-img img-fluid" alt="Iconic Bridge">
                     <div class="card-body">
-                        <h5 class="card-title">Modern Tallest Bridge</h5>
-                        <p class="card-text">A stunning modern bridge with remarkable height.</p>
+                        <h5 class="card-title">Asia Modern Bridge</h5>
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-4 bridge-card" data-category="iconic" data-type="longest">
+            <div class="col-lg-4 bridge-card asia" data-category="iconic" data-attribute="shortest">
                 <div class="card">
-                    <img src="bridge2.jpg" class="card-img-top" alt="Iconic Longest Bridge">
+                    <img src="../Media/Bridge 2.jpg" height="200" class="card-img img-fluid" alt="Iconic Bridge">
                     <div class="card-body">
-                        <h5 class="card-title">Iconic Longest Bridge</h5>
-                        <p class="card-text">A bridge known for its iconic and long structure.</p>
+                        <h5 class="card-title">Asia Iconic Bridge</h5>
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-4 bridge-card" data-category="historical" data-type="oldest">
+            <div class="col-lg-4 bridge-card asia" data-category="historical" data-attribute="shortest">
                 <div class="card">
-                    <img src="bridge3.jpg" class="card-img-top" alt="Historical Oldest Bridge">
+                    <img src="../Media/Bridge 2.jpg" height="200" class="card-img img-fluid" alt="Iconic Bridge">
                     <div class="card-body">
-                        <h5 class="card-title">Historical Oldest Bridge</h5>
-                        <p class="card-text">One of the oldest bridges still in use today.</p>
+                        <h5 class="card-title">Asia Historical Bridge</h5>
+                    </div>
+                </div>
+            </div>
+            <!--Europe Bridges-->
+            <div class="col-lg-4 bridge-card europe" data-category="modern" data-attribute="shortest">
+                <div class="card">
+                    <img src="../Media/Bridge 2.jpg" height="200" class="card-img img-fluid" alt="Iconic Bridge">
+                    <div class="card-body">
+                        <h5 class="card-title">Europe Modern Bridge</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 bridge-card europe" data-category="iconic" data-attribute="shortest">
+                <div class="card">
+                    <img src="../Media/Bridge 2.jpg" height="200" class="card-img img-fluid" alt="Iconic Bridge">
+                    <div class="card-body">
+                        <h5 class="card-title">Europe Iconic Bridge</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 bridge-card europe" data-category="historical" data-attribute="shortest">
+                <div class="card">
+                    <img src="../Media/Bridge 2.jpg" height="200" class="card-img img-fluid" alt="Iconic Bridge">
+                    <div class="card-body">
+                        <h5 class="card-title">Europe Historical Bridge</h5>
+                    </div>
+                </div>
+            </div>
+            <!--Africa Bridges-->
+            <div class="col-lg-4 bridge-card africa" data-category="modern" data-attribute="shortest">
+                <div class="card">
+                    <img src="../Media/Bridge 2.jpg" height="200" class="card-img img-fluid" alt="Iconic Bridge">
+                    <div class="card-body">
+                        <h5 class="card-title">Africa Modern Bridge</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 bridge-card africa" data-category="iconic" data-attribute="shortest">
+                <div class="card">
+                    <img src="../Media/Bridge 2.jpg" height="200" class="card-img img-fluid" alt="Iconic Bridge">
+                    <div class="card-body">
+                        <h5 class="card-title">Africa Iconic Bridge</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 bridge-card africa" data-category="historical" data-attribute="shortest">
+                <div class="card">
+                    <img src="../Media/Bridge 2.jpg" height="200" class="card-img img-fluid" alt="Iconic Bridge">
+                    <div class="card-body">
+                        <h5 class="card-title">Africa Histroical Bridge</h5>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 
-    <!-- jQuery Logic for Filtering -->
     <script>
         $(document).ready(function () {
-            let filterStage = 0;
-            let selectedCategory = "";
-
-            $(".filter-btn").click(function () {
-                let filterValue = $(this).attr("data-filter");
-
-                if (filterValue === "asia" && filterStage === 0) {
-                    filterStage = 1;
-                    selectedCategory = "asia";
-
-                    $("#continent-filters").hide();
-                    $("#category-filters").show();
-                }
+            $('#continentSelect').change(function () {
+                $('#categoryFilters').show();
+                $('.bridge-card').hide();
             });
 
-            $(".category-btn").click(function () {
-                if (filterStage === 1) {
-                    filterStage = 2;
-                    selectedCategory = $(this).attr("data-filter");
-
-                    $("#category-filters").hide();
-                    $("#type-filters").show();
+            $('.filter-btn').click(function () {
+                let category = $(this).data('category');
+                $('.bridge-card').hide();
+                if (category === 'all') {
+                    $('.asia').show();
+                } else {
+                    $('.asia[data-category="' + category + '"]').show();
                 }
-            });
-
-            $(".type-btn").click(function () {
-                if (filterStage === 2) {
-                    let finalFilter = $(this).attr("data-filter");
-
-                    $("#type-filters").hide();
-
-                    $(".bridge-card").hide();
-                    $(`.bridge-card[data-category="${selectedCategory}"][data-type="${finalFilter}"]`).fadeIn();
-                }
+                $('#attributeFilters').show();
             });
         });
     </script>
-
 </body>
-
 </html>
